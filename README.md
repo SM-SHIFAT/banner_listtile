@@ -1,6 +1,6 @@
 ## Banner Listtile
 
-[<img src="https://img.shields.io/badge/pub-v1.0.0-blue.svg">](https://pub.dev/packages/banner_listtile)
+[<img src="https://img.shields.io/badge/pub-v2.0.0-blue.svg">](https://pub.dev/packages/banner_listtile)
 [<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
 <br />
 Banner_Listtile comes handy when you need a templete of tile with build-in banner option.
