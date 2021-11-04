@@ -1,11 +1,7 @@
 ## Banner Listtile
 
-<a href="https://pub.dev/packages/banner_listtile">
-  <img  src="https://img.shields.io/badge/pub-v1.0.0-blue.svg"/>
-</a>
-<a href="https://pub.dev/packages/banner_listtile/license">
-  <img  src="https://img.shields.io/badge/License-MIT-green.svg"/>
-</a>
+[<img src="https://img.shields.io/badge/pub-v1.0.0-blue.svg">](https://pub.dev/packages/banner_listtile)
+[<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
 <br />
 Banner_Listtile comes handy when you need a templete of tile with build-in banner option.
 You may have seen banner with tag ex. "new", "Hot", "New Collection" etc. Banner_listtile do the exact thing also give you extra feature of customizing it easily.
