@@ -52,8 +52,8 @@ import 'package:banner_listtile/banner_listtile.dart';
 ## Sample Code
 
 ```dart
-class BannerListTile extends StatelessWidget {
-  const BannerListTile({Key? key}) : super(key: key);
+class BannerListTileExample extends StatelessWidget {
+  const BannerListTileExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
