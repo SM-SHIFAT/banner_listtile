@@ -17,3 +17,8 @@
 - Added a imagecontainer index option to show zigzag shape in list.
 - Now imagecontainer size can be changed.
 - Trailing now can be shown at the center or top. (Size depends on imagecontainer size)
+
+## 2.1.0
+- Added elevation/shadow.
+- Added option to give side border.
+- Now margin can be added.
