@@ -1,21 +1,16 @@
 ## Banner Listtile
 
-<a href="https://pub.dev/packages/banner_listtile">
-  <img  src="https://img.shields.io/badge/pub-v1.0.0-blue.svg"/>
-</a>
-<a href="https://pub.dev/packages/banner_listtile/license">
-  <img  src="https://img.shields.io/badge/License-MIT-green.svg"/>
-</a>
+[<img src="https://img.shields.io/badge/pub-v2.1.0-blue.svg">](https://pub.dev/packages/banner_listtile)
+[<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
 <br />
-Banner_Listtile comes handy when you need a templete of tile with build-in banner option.
-You may have seen banner with tag ex. "new", "Hot", "New Collection" etc. Banner_listtile do the exact thing also give you extra feature of customizing it easily.
+Banner_Listtile comes in handy when you need a temple of tile with a built-in banner option. You may have seen a banner with a tag ex. "New," "Hot," "New Collection" etc. Banner_listtile does the exact thing, and also gives you the extra feature of customizing it easily.
 
 
 ## Installation
 i. Add the latest version of this package to your pubspec.yaml file, and run: 'dart pub get':
 ```yaml
 dependancies:
-  banner_listtile: ^2.0.0
+  banner_listtile: ^2.1.0
 ```
 
 ii. Import the package in your Flutter App and use it.
@@ -27,6 +22,8 @@ import 'package:banner_listtile/banner_listtile.dart';
 <table>
 <tr>
 <td  valign="top">
+
+## 1.0.0 properties<br />
 - bannerText<br />
 - showBanner<br />
 - bannerPositionRight<br />
@@ -43,7 +40,7 @@ import 'package:banner_listtile/banner_listtile.dart';
 </td>
 <td  valign="top">
 
-## New 2.0.0 properties added<br />
+## 2.0.0 properties added<br />
 - imageContainerSize<br />
 - imageContainerShapeZigzagIndex<br />
 - centerTrailingbyImageboxsize<br />
@@ -51,14 +48,24 @@ import 'package:banner_listtile/banner_listtile.dart';
 - subtitleOpacity<br />
 - bannersize
 </td>
+  <td  valign="top">
+
+## New 2.1.0 properties added<br />
+- elevation<br />
+- borderside<br />
+- margin
+</td>
 </tr>
 </table>
+
+## Note:
+If you use it inside a Column, Listview or any kind of vertical list, then you do not need to give it a height property. But when you use it as a single widget or inside any other widget, then you are suggested to define its height by giving it a height property. If you don't, then it might end up taking all the available space.
 
 ## Sample Code
 
 ```dart
-class BannerListTile extends StatelessWidget {
-  const BannerListTile({Key? key}) : super(key: key);
+class BannerListTileExample extends StatelessWidget {
+  const BannerListTileExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,13 +101,10 @@ class BannerListTile extends StatelessWidget {
 
 <img  src="https://user-images.githubusercontent.com/60544576/140290340-e166477e-7113-4032-8546-e51cc8e655ed.png"  alt="">
 
-## Note:
-If you use it inside Column widget you do not need to add height property, but when you use it as a single widget or inside any other widget other than column then you must define it's height by giving it a height property.
-
 ## New zigzag shape
 ```dart
 BannerListTile(
-     imageContainerShapeZigzagIndex: index,
+     imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
 ),
 ```
 <img  src="https://user-images.githubusercontent.com/60544576/140294624-de6c38c2-21a7-4e09-80f8-786173b2a51c.png"  alt="">
@@ -112,4 +116,9 @@ BannerListTile(
 
 
 ## Upcoming
-There are few things to add in future update. More feature are yet to come. Hope for the best.
+
+Things are added & also will be added more if needed in future.
+If you have any suggestions or bug report then please consider mailing me at:
+```dart 
+eaglex129[at the rate]gmail[dot]com
+```
