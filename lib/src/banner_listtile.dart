@@ -117,6 +117,16 @@ class BannerListTile extends StatelessWidget {
   final List<Color> color = const [Color(0xff003354), Colors.blue];
   static int num = math.Random().nextInt(2);
 
+  ///Fuctions
+  final Function()? onTap;
+  final Function()? onTapCancel;
+  final Function(bool)? onHighlightChanged;
+  final Function(bool)? onFocusChange;
+  final Function(TapDownDetails)? onTapDown;
+  final Function()? onLongPress;
+  final Function(bool)? onHover;
+  final Function()? onDoubleTap;
+
   ///Suitable for use in column or listview or anykind of vertical list.
   ///then it will automatically take a height by given child.
   ///
@@ -147,6 +157,14 @@ class BannerListTile extends StatelessWidget {
     this.elevation,
     this.randomBackgroundColor,
     this.borderside,
+    this.onTap,
+    this.onTapCancel,
+    this.onHighlightChanged,
+    this.onFocusChange,
+    this.onTapDown,
+    this.onLongPress,
+    this.onHover,
+    this.onDoubleTap,
   }) : super(key: key);
 
   @override
@@ -161,12 +179,20 @@ class BannerListTile extends StatelessWidget {
       child: ClipRRect(
         clipBehavior: Clip.antiAlias,
         borderRadius: borderRadius ?? BorderRadius.circular(0),
-        child: Container(
+        child: SizedBox(
           height: height,
           width: width ?? screenwidth,
           child: Material(
             color: randomBackgroundColor == true ? color[num] : backgroundColor,
-            child: Container(
+            child: InkWell(
+              onTapCancel: onTapCancel,
+              onHighlightChanged: onHighlightChanged,
+              onFocusChange: onFocusChange,
+              onTapDown: onTapDown,
+              onLongPress: onLongPress,
+              onHover: onHover,
+              onDoubleTap: onDoubleTap,
+              onTap: onTap,
               child: Stack(
                 children: [
                   Row(
@@ -297,7 +323,7 @@ class BannerListTile extends StatelessWidget {
                                 angle: bannerPositionRight == false
                                     ? -math.pi / 4
                                     : math.pi / 4,
-                                child: Container(
+                                child: SizedBox(
                                   height: bannersize == null
                                       ? 30
                                       : bannersize! >= 80

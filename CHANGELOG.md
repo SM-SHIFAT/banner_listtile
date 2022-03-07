@@ -22,3 +22,6 @@
 - Added elevation/shadow.
 - Added option to give side border.
 - Now margin can be added.
+
+## 2.2.0
+- Added functionalities. Example: onTap, onDoubleTap, & more.

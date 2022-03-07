@@ -1,6 +1,6 @@
 name: banner_listtile
 description: Create tile with banner at the corner. This package allow you to make a Listtile with option to show or hide banner. Banner with "New" tag or something you want. And lot more.
-version: 2.1.0
+version: 2.2.0
 homepage: https://github.com/SM-SHIFAT/banner_listtile.git
 
 environment:
