@@ -1,5 +1,4 @@
 import 'package:banner_listtile/banner_listtile.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,6 +38,7 @@ class ContainerTestView extends StatelessWidget {
           child: Column(
             children: [
               BannerListTile(
+                onTap: (){},
                 backgroundColor: Colors.blue,
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
@@ -54,29 +54,28 @@ class ContainerTestView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                        child: Row(
+                    Row(
                       children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.facebook_outlined,
-                              color: Colors.black87,
-                            )),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.location_on_outlined,
-                              color: Colors.black87,
-                            )),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.phone,
-                              color: Colors.black87,
-                            )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.facebook_outlined,
+                          color: Colors.black87,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.location_on_outlined,
+                          color: Colors.black87,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.phone,
+                          color: Colors.black87,
+                        )),
                       ],
-                    )),
+                    ),
                   ],
                 ),
                 trailing: IconButton(
@@ -89,6 +88,7 @@ class ContainerTestView extends StatelessWidget {
               const SizedBox(height: 4),
               //
               BannerListTile(
+                onTap: (){},
                 bannerPositionRight: true,
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
@@ -112,6 +112,7 @@ class ContainerTestView extends StatelessWidget {
               //
               const SizedBox(height: 4),
               BannerListTile(
+                onTap: (){},
                 bannerPositionRight: false,
                 bannerColor: Colors.amber,
                 bannerText: "New Item",
@@ -131,29 +132,28 @@ class ContainerTestView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                        child: Row(
+                    Row(
                       children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.facebook_outlined,
-                              color: Colors.black87,
-                            )),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.location_on_outlined,
-                              color: Colors.black87,
-                            )),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.phone,
-                              color: Colors.black87,
-                            )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.facebook_outlined,
+                          color: Colors.black87,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.location_on_outlined,
+                          color: Colors.black87,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.phone,
+                          color: Colors.black87,
+                        )),
                       ],
-                    )),
+                    ),
                   ],
                 ),
                 trailing: IconButton(
@@ -166,6 +166,7 @@ class ContainerTestView extends StatelessWidget {
               const SizedBox(height: 4),
               //
               BannerListTile(
+                onTap: (){},
                 bannerText: "banner",
                 bannerPositionRight: false,
                 borderRadius: BorderRadius.circular(8),
@@ -191,6 +192,8 @@ class ContainerTestView extends StatelessWidget {
               const SizedBox(height: 4),
               //
               BannerListTile(
+                onTap: (){},
+                onLongPress: (){},
                 randomBackgroundColor: true,
                 showBanner: false,
                 bannerText: "banner",

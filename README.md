@@ -22,23 +22,23 @@ import 'package:banner_listtile/banner_listtile.dart';
 <table>
 <tr>
 <td  valign="top">
-  
+
 ## New 2.2.0 properties<br />
 - Added onPress functionalities <br />
   [onTapCancel, <br />onHighlightChanged, <br />onFocusChange, <br />onTapDown, <br />onLongPress, <br />onHover, <br />onDoubleTap, <br />onTap]
 - added few bugs to fix later 😅. [ps: no no dev is just joking]
 </td>
-  
+
 <td  valign="top">
-  
+
 ## 2.1.0 properties added<br />
 - elevation<br />
 - borderside<br />
 - margin
 </td>
-  
+
 <td  valign="top">
-  
+
 ## 2.0.0 properties added<br />
 - imageContainerSize<br />
 - imageContainerShapeZigzagIndex<br />
@@ -47,9 +47,9 @@ import 'package:banner_listtile/banner_listtile.dart';
 - subtitleOpacity<br />
 - bannersize
 </td>
-  
+
 <td  valign="top">
-  
+
 ## 1.0.0 properties<br />
 - bannerText<br />
 - showBanner<br />
@@ -114,7 +114,7 @@ class BannerListTileExample extends StatelessWidget {
 ## New zigzag shape
 ```dart
 BannerListTile(
-     imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
+imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
 ),
 ```
 <img  src="https://user-images.githubusercontent.com/60544576/140294624-de6c38c2-21a7-4e09-80f8-786173b2a51c.png"  alt="">
