@@ -1,16 +1,12 @@
-## Banner Listtile
-
-[<img src="https://img.shields.io/badge/pub-v2.2.0-blue.svg">](https://pub.dev/packages/banner_listtile)
-[<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
-<br />
-Banner_Listtile comes in handy when you need a temple of tile with a built-in banner option. You may have seen a banner with a tag ex. "New," "Hot," "New Collection" etc. Banner_listtile does the exact thing, and also gives you the extra feature of customizing it easily.
+Banner_Listtile comes handy when you need a templete of listtile with build-in banner option.
+All of us have seen banner with tag ex. "new", "Hot", "New Collection" etc. Banner_listtile do the exact thing also give you extra feature of customizing it easily.
 
 
 ## Installation
 i. Add the latest version of this package to your pubspec.yaml file, and run: 'dart pub get':
 ```yaml
 dependancies:
-  banner_listtile: ^2.2.0
+  banner_listtile: ^1.0.0
 ```
 
 ii. Import the package in your Flutter App and use it.
@@ -19,63 +15,25 @@ import 'package:banner_listtile/banner_listtile.dart';
 ```
 
 ## Properties
-<table>
-<tr>
-<td  valign="top">
-
-## New 2.2.0 properties<br />
-- Added onPress functionalities <br />
-  [onTapCancel, <br />onHighlightChanged, <br />onFocusChange, <br />onTapDown, <br />onLongPress, <br />onHover, <br />onDoubleTap, <br />onTap]
-- added few bugs to fix later 😅. [ps: no no dev is just joking]
-</td>
-
-<td  valign="top">
-
-## 2.1.0 properties added<br />
-- elevation<br />
-- borderside<br />
-- margin
-</td>
-
-<td  valign="top">
-
-## 2.0.0 properties added<br />
-- imageContainerSize<br />
-- imageContainerShapeZigzagIndex<br />
-- centerTrailingbyImageboxsize<br />
-- trailingBoxwidth<br />
-- subtitleOpacity<br />
-- bannersize
-</td>
-
-<td  valign="top">
-
-## 1.0.0 properties<br />
-- bannerText<br />
-- showBanner<br />
-- bannerPositionRight<br />
-- bannerTextColor<br />
-- bannerColor<br />
-- title<br />
-- subtitle<br />
-- borderRadius<br />
-- imageContainer<br />
-- trailing<br />
-- backgroundColor<br />
-- width<br />
+- bannerText
+- showBanner
+- bannerPositionRight
+- bannerTextColor
+- bannerColor
+- title
+- subtitle
+- borderRadius
+- imageContainer
+- trailing
+- backgroundColor
+- width
 - randomBackgroundColor
-</td>
-</tr>
-</table>
-
-## Note:
-If you use it inside a Column, Listview or any kind of vertical list, then you do not need to give it a height property. But when you use it as a single widget or inside any other widget, then you are suggested to define its height by giving it a height property. If you don't, then it might end up taking all the available space.
 
 ## Sample Code
 
 ```dart
-class BannerListTileExample extends StatelessWidget {
-  const BannerListTileExample({Key? key}) : super(key: key);
+class BannerListTile extends StatelessWidget {
+  const BannerListTile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +44,10 @@ class BannerListTileExample extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           imageContainer: Image(
               image: NetworkImage(
-                  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb1.2.1&auto=format&fit=crop&w=387&q=80"),
+                  "https://images.unsplash.com/photo-1529626455594-
+  4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1w
+  YWdlfHx8fGVufDB8fHx8&ixlib=rb-
+  1.2.1&auto=format&fit=crop&w=387&q=80"),
               fit: BoxFit.cover),
           title: Text(
             "Lisa",
@@ -108,16 +69,7 @@ class BannerListTileExample extends StatelessWidget {
   }
 }
 ```
-
-<img  src="https://user-images.githubusercontent.com/60544576/140290340-e166477e-7113-4032-8546-e51cc8e655ed.png"  alt="">
-
-## New zigzag shape
-```dart
-BannerListTile(
-imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
-),
-```
-<img  src="https://user-images.githubusercontent.com/60544576/140294624-de6c38c2-21a7-4e09-80f8-786173b2a51c.png"  alt="">
+<img  src="https://user-images.githubusercontent.com/60544576/139554992-b68480e9-a6a0-47ec-af5c-b90f451e0b95.png"  alt="">
 
 
 ## Examples
@@ -126,9 +78,4 @@ imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
 
 
 ## Upcoming
-
-Things are added & also will be added more if needed in future.
-If you have any suggestions or bug report then please consider mailing me at:
-```dart 
-eaglex129[at the rate]gmail[dot]com
-```
+There are few things to add in future update. More feature are yet to come. Hope for the best.
