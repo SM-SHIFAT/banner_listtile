@@ -1,6 +1,6 @@
 ## Banner Listtile
 
-[<img src="https://img.shields.io/badge/pub-v2.1.0-blue.svg">](https://pub.dev/packages/banner_listtile)
+[<img src="https://img.shields.io/badge/pub-v2.2.0-blue.svg">](https://pub.dev/packages/banner_listtile)
 [<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
 <br />
 Banner_Listtile comes in handy when you need a temple of tile with a built-in banner option. You may have seen a banner with a tag ex. "New," "Hot," "New Collection" etc. Banner_listtile does the exact thing, and also gives you the extra feature of customizing it easily.
@@ -10,7 +10,7 @@ Banner_Listtile comes in handy when you need a temple of tile with a built-in ba
 i. Add the latest version of this package to your pubspec.yaml file, and run: 'dart pub get':
 ```yaml
 dependancies:
-  banner_listtile: ^2.1.0
+  banner_listtile: ^2.2.0
 ```
 
 ii. Import the package in your Flutter App and use it.
@@ -22,7 +22,34 @@ import 'package:banner_listtile/banner_listtile.dart';
 <table>
 <tr>
 <td  valign="top">
-
+  
+## New 2.2.0 properties<br />
+- Added onPress functionalities <br />
+  [onTapCancel, <br />onHighlightChanged, <br />onFocusChange, <br />onTapDown, <br />onLongPress, <br />onHover, <br />onDoubleTap, <br />onTap]
+- added few bugs to fix later 😅. [ps: no no dev is just joking]
+</td>
+  
+<td  valign="top">
+  
+## 2.1.0 properties added<br />
+- elevation<br />
+- borderside<br />
+- margin
+</td>
+  
+<td  valign="top">
+  
+## 2.0.0 properties added<br />
+- imageContainerSize<br />
+- imageContainerShapeZigzagIndex<br />
+- centerTrailingbyImageboxsize<br />
+- trailingBoxwidth<br />
+- subtitleOpacity<br />
+- bannersize
+</td>
+  
+<td  valign="top">
+  
 ## 1.0.0 properties<br />
 - bannerText<br />
 - showBanner<br />
@@ -37,23 +64,6 @@ import 'package:banner_listtile/banner_listtile.dart';
 - backgroundColor<br />
 - width<br />
 - randomBackgroundColor
-</td>
-<td  valign="top">
-
-## 2.0.0 properties added<br />
-- imageContainerSize<br />
-- imageContainerShapeZigzagIndex<br />
-- centerTrailingbyImageboxsize<br />
-- trailingBoxwidth<br />
-- subtitleOpacity<br />
-- bannersize
-</td>
-  <td  valign="top">
-
-## New 2.1.0 properties added<br />
-- elevation<br />
-- borderside<br />
-- margin
 </td>
 </tr>
 </table>
