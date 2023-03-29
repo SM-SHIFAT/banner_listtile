@@ -1,6 +1,6 @@
 ## Banner Listtile
 
-[<img src="https://img.shields.io/badge/pub-v2.2.0-blue.svg">](https://pub.dev/packages/banner_listtile)
+[<img src="https://img.shields.io/badge/pub-v2.2.1-blue.svg">](https://pub.dev/packages/banner_listtile)
 [<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
 <br />
 Banner_Listtile comes in handy when you need a temple of tile with a built-in banner option. You may have seen a banner with a tag ex. "New," "Hot," "New Collection" etc. Banner_listtile does the exact thing, and also gives you the extra feature of customizing it easily.
@@ -10,7 +10,7 @@ Banner_Listtile comes in handy when you need a temple of tile with a built-in ba
 i. Add the latest version of this package to your pubspec.yaml file, and run: 'dart pub get':
 ```yaml
 dependancies:
-  banner_listtile: ^2.2.0
+  banner_listtile: ^2.2.1
 ```
 
 ii. Import the package in your Flutter App and use it.
@@ -121,14 +121,17 @@ imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
 
 
 ## Examples
-<img  src="https://user-images.githubusercontent.com/60544576/139554938-56335161-a08b-4b81-a3a6-02f78bd5a9e7.png"  alt="">
+<img src="https://user-images.githubusercontent.com/60544576/228489228-03352003-f7a9-4c0e-abff-67ee98a8d5d3.png" alt="example screenshot">
+
 
 
 
 ## Upcoming
 
 Things are added & also will be added more if needed in future.
+Contributions to this package is welcomed. For this go to github repository of this package and fork this repository.
+
 If you have any suggestions or bug report then please consider mailing me at:
 ```dart 
-eaglex129[at the rate]gmail[dot]com
+eaglex129@gmail[dot]com
 ```
