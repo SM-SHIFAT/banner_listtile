@@ -1,6 +1,6 @@
 ## Banner Listtile
 
-[<img src="https://img.shields.io/badge/pub-v2.2.1-blue.svg">](https://pub.dev/packages/banner_listtile)
+[<img src="https://img.shields.io/badge/pub-v2.2.2-blue.svg">](https://pub.dev/packages/banner_listtile)
 [<img src="https://img.shields.io/badge/License-MIT-green.svg">](https://pub.dev/packages/banner_listtile/license)
 <br />
 Banner_Listtile comes in handy when you need a temple of tile with a built-in banner option. You may have seen a banner with a tag ex. "New," "Hot," "New Collection" etc. Banner_listtile does the exact thing, and also gives you the extra feature of customizing it easily.
@@ -10,7 +10,7 @@ Banner_Listtile comes in handy when you need a temple of tile with a built-in ba
 i. Add the latest version of this package to your pubspec.yaml file, and run: 'dart pub get':
 ```yaml
 dependancies:
-  banner_listtile: ^2.2.1
+  banner_listtile: ^2.2.2
 ```
 
 ii. Import the package in your Flutter App and use it.

@@ -1,6 +1,6 @@
 name: banner_listtile
 description: Create a tile with banner at the corner and lot more option to customize. Banner with "New" tag or something you want.
-version: 2.2.1
+version: 2.2.2
 homepage: https://github.com/SM-SHIFAT/banner_listtile.git
 
 environment:
