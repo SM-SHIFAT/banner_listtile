@@ -132,6 +132,7 @@ Things are added & also will be added more if needed in future.
 Contributions to this package is welcomed. For this go to github repository of this package and fork this repository.
 
 If you have any suggestions or bug report then please consider mailing me at:
-``` 
+
+```dart 
 eaglex129@gmail[dot]com
 ```
