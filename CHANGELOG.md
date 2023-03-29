@@ -1,3 +1,6 @@
+## 2.2.2
+- Documentation updated.
+
 ## 2.2.1
 - All dart plugins are upgraded and up to date (Flutter 3.7).
 - Readme updated.
