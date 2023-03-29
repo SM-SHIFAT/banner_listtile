@@ -42,8 +42,10 @@ class ContainerTestView extends StatelessWidget {
                 backgroundColor: Colors.blue,
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
-                    image: AssetImage("assets/image/model.jpg"),
-                    fit: BoxFit.cover),
+                    image: NetworkImage(
+                            "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb1.2.1&auto=format&fit=crop&w=387&q=80"),
+                        fit: BoxFit.cover),
+
                 title: const Text(
                   "Monalisa",
                   style: TextStyle(fontSize: 24, color: Colors.white),
@@ -56,24 +58,24 @@ class ContainerTestView extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.facebook_outlined,
-                          color: Colors.black87,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.location_on_outlined,
-                          color: Colors.black87,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.phone,
-                          color: Colors.black87,
-                        )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.facebook_outlined,
+                              color: Colors.black87,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.location_on_outlined,
+                              color: Colors.black87,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.phone,
+                              color: Colors.black87,
+                            )),
                       ],
                     ),
                   ],
@@ -89,10 +91,15 @@ class ContainerTestView extends StatelessWidget {
               //
               BannerListTile(
                 onTap: (){},
+                elevation: 8,
                 bannerPositionRight: true,
+                bannerColor: Colors.amber,
+                bannerTextColor: Colors.red,
+                bannerText: "Hot",
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
-                    image: AssetImage("assets/image/model.jpg"),
+                    image: NetworkImage(
+                        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb1.2.1&auto=format&fit=crop&w=387&q=80"),
                     fit: BoxFit.cover),
                 title: const Text(
                   "Lisa",
@@ -120,7 +127,8 @@ class ContainerTestView extends StatelessWidget {
                 backgroundColor: Colors.blue,
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
-                    image: AssetImage("assets/image/model.jpg"),
+                    image: NetworkImage(
+                        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb1.2.1&auto=format&fit=crop&w=387&q=80"),
                     fit: BoxFit.cover),
                 title: const Text(
                   "Monalisa",
@@ -134,24 +142,24 @@ class ContainerTestView extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.facebook_outlined,
-                          color: Colors.black87,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.location_on_outlined,
-                          color: Colors.black87,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.phone,
-                          color: Colors.black87,
-                        )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.facebook_outlined,
+                              color: Colors.black87,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.location_on_outlined,
+                              color: Colors.black87,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.phone,
+                              color: Colors.black87,
+                            )),
                       ],
                     ),
                   ],
@@ -171,7 +179,8 @@ class ContainerTestView extends StatelessWidget {
                 bannerPositionRight: false,
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
-                    image: AssetImage("assets/image/model.jpg"),
+                    image: NetworkImage(
+                        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb1.2.1&auto=format&fit=crop&w=387&q=80"),
                     fit: BoxFit.cover),
                 title: const Text(
                   "Lisa",
@@ -195,27 +204,26 @@ class ContainerTestView extends StatelessWidget {
                 onTap: (){},
                 onLongPress: (){},
                 randomBackgroundColor: true,
-                showBanner: false,
-                bannerText: "banner",
-                bannerPositionRight: false,
+                showBanner: true,
+                bannerText: "Big banner",
+                subtitleOpacity: 1.0,
+
+                bannersize: 60,
+                bannerPositionRight: true,
                 borderRadius: BorderRadius.circular(8),
                 imageContainer: const Image(
-                    image: AssetImage("assets/image/model.jpg"),
+                    image: NetworkImage(
+                        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb1.2.1&auto=format&fit=crop&w=387&q=80"),
                     fit: BoxFit.cover),
                 title: const Text(
-                  "Lisa",
+                  "Dummy Long Text",
                   style: TextStyle(fontSize: 24, color: Colors.white),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
-                subtitle: const Text("A model from NY",
+                subtitle: const Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. \nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                     style: TextStyle(fontSize: 13, color: Colors.white)),
-                trailing: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.delete_forever,
-                      color: Colors.red,
-                    )),
+
               ),
             ],
           ),

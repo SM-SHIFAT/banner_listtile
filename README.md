@@ -112,9 +112,9 @@ class BannerListTileExample extends StatelessWidget {
 <img  src="https://user-images.githubusercontent.com/60544576/140290340-e166477e-7113-4032-8546-e51cc8e655ed.png"  alt="">
 
 ## New zigzag shape
-```dart
+```flutter
 BannerListTile(
-imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
+    imageContainerShapeZigzagIndex: index, // [index = (even or odd integer number)]
 ),
 ```
 <img  src="https://user-images.githubusercontent.com/60544576/140294624-de6c38c2-21a7-4e09-80f8-786173b2a51c.png"  alt="">
@@ -132,6 +132,7 @@ Things are added & also will be added more if needed in future.
 Contributions to this package is welcomed. For this go to github repository of this package and fork this repository.
 
 If you have any suggestions or bug report then please consider mailing me at:
+
 ```dart 
 eaglex129@gmail[dot]com
 ```
