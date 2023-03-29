@@ -1,6 +1,6 @@
 name: banner_listtile
-description: Create tile with banner at the corner. This package allow you to make a Listtile with option to show or hide banner. Banner with "New" tag or something you want. And lot more.
-version: 2.2.0
+description: Create tile with banner at the corner. This package allow you to make a custom Listtile with option to show or hide banner. Banner with "New" tag or something you want. And lot more.
+version: 2.2.1
 homepage: https://github.com/SM-SHIFAT/banner_listtile.git
 
 environment:
@@ -14,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

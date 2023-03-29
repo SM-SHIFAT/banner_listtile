@@ -1,11 +1,14 @@
-## 1.0.0
+## 2.2.1
+- All dart plugins are upgraded and up to date (Flutter 3.7).
+- Readme updated.
 
-- Added banner
-- Leading image option with custom shape container
-- Rounded corner container option
-- Title,subtitle, & trailing button
-- & few customization like color & few others
-- Random color option for the tile
+## 2.2.0
+- Added functionalities. Example: onTap, onDoubleTap, & more.
+
+## 2.1.0
+- Added elevation/shadow.
+- Added option to give side border.
+- Now margin can be added.
 
 ## 2.0.0
 - Fixed few bugs.
@@ -18,10 +21,10 @@
 - Now imagecontainer size can be changed.
 - Trailing now can be shown at the center or top. (Size depends on imagecontainer size)
 
-## 2.1.0
-- Added elevation/shadow.
-- Added option to give side border.
-- Now margin can be added.
-
-## 2.2.0
-- Added functionalities. Example: onTap, onDoubleTap, & more.
+## 1.0.0
+- Added banner
+- Leading image option with custom shape container
+- Rounded corner container option
+- Title,subtitle, & trailing button
+- & few customization like color & few others
+- Random color option for the tile
