@@ -28,6 +28,14 @@ class BannerListTile extends StatelessWidget {
   ///Banner text color. [bannerTextColor = Colors.red]
   final Color? bannerTextColor;
 
+  ///Icon to show on Banner.
+  ///If bannerIcon is provided then bannertext wont be shown.
+  final Widget? bannerIcon;
+
+  ///Rotate Icon. Formula: [(math.pi / bannerIconRotation)]
+  ///Default value is bannerIconRotation = 4.
+  final double? bannerIconRotation;
+
   ///Banner foreground color.
   final Color? bannerColor;
 
@@ -142,6 +150,8 @@ class BannerListTile extends StatelessWidget {
     this.bannerPosition = BannerPosition.topRight,
     this.bannerTextColor,
     this.bannerColor,
+    this.bannerIcon,
+    this.bannerIconRotation = 4,
     this.title,
     this.subtitle,
     this.subtitleOpacity = 0.80,
@@ -323,7 +333,10 @@ class BannerListTile extends StatelessWidget {
                               alignment: bannerPosition == BannerPosition.topLeft
                                   ? Alignment.topLeft
                                   : Alignment.topRight,
-                              child: Transform.rotate(
+
+                              child: bannerIcon == null?
+                                  //Banner Text
+                              Transform.rotate(
                                 angle: bannerPosition == BannerPosition.topLeft
                                     ? -math.pi / 4
                                     : math.pi / 4,
@@ -357,9 +370,48 @@ class BannerListTile extends StatelessWidget {
                                             style: TextStyle(
                                                 color: bannerTextColor ??
                                                     Colors.yellow),
-                                          ))),
+                                          ),),),
                                 ),
-                              )),
+                              ):
+
+                              //Banner Icon
+                              SizedBox(
+
+                                height: bannersize == null || bannersize! <= 40
+                                    ? 20:bannersize! >=80? 40: (bannersize!/2), //30
+                                width: bannersize == null || bannersize! <= 40
+                                    ? 20:bannersize! >=80? 40: (bannersize!/2),
+                                child: Container(
+                                  alignment: Alignment.bottomLeft,
+                                  transformAlignment: Alignment.bottomLeft,
+
+
+                                  child: Transform.rotate(
+                                    angle: bannerPosition == BannerPosition.topLeft
+                                        ? -math.pi / bannerIconRotation!
+                                        : math.pi / bannerIconRotation!,
+                                    child: SizedBox(
+                                      height: bannersize == null || bannersize! <= 40
+                                          ? 20-(20 - (math.sqrt((20*20)+(20*20))/2)):bannersize! >=80? 40-(40 - (math.sqrt((40*40)+(40*40))/2)): (bannersize!/2)-((bannersize!/2) - (math.sqrt(((bannersize!/2)*(bannersize!/2))+((bannersize!/2)*(bannersize!/2)))/2)), //30
+                                      width: bannersize == null || bannersize! <= 40
+                                          ? 20-(20 - (math.sqrt((20*20)+(20*20))/2)):bannersize! >=80? 40-(40 - (math.sqrt((40*40)+(40*40))/2)): (bannersize!/2)-((bannersize!/2) - (math.sqrt(((bannersize!/2)*(bannersize!/2))+((bannersize!/2)*(bannersize!/2)))/2)),
+                                      child: FittedBox(
+                                        alignment: Alignment.center,
+                                        fit: BoxFit.contain,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              right: 0,
+                                              top: 0,
+                                              left: 0,
+                                              bottom: 0),
+                                          child: bannerIcon,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ),
                         ),
                       ),
                     ),
