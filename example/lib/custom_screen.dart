@@ -72,7 +72,7 @@ class CustomScreen extends StatelessWidget {
             bannerIcon: Icon(Icons.dashboard_customize),
             //bannerIcon: Container(color: Colors.green,height: 200,width: 200),
             bannerIconRotation: 1,
-            bannersize: 50,
+            bannerSize: 50,
 
             borderRadius: BorderRadius.circular(8),
             imageContainer: const Image(
@@ -155,7 +155,8 @@ class CustomScreen extends StatelessWidget {
           BannerListTile(
             onTap: (){},
             bannerText: "banner",
-            randomBackgroundColor: true,
+
+
             bannerPosition: BannerPosition.topLeft,
             borderRadius: BorderRadius.circular(8),
             imageContainer: const Image(
@@ -183,12 +184,12 @@ class CustomScreen extends StatelessWidget {
           BannerListTile(
             onTap: (){},
             onLongPress: (){},
-            randomBackgroundColor: true,
+
             showBanner: true,
             bannerText: "Big banner",
             subtitleOpacity: 1.0,
 
-            bannersize: 60,
+            bannerSize: 60,
             bannerPosition: BannerPosition.topRight,
             borderRadius: BorderRadius.circular(8),
             imageContainer: const Image(

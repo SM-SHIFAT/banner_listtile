@@ -93,7 +93,7 @@ class BannerListTile extends StatelessWidget {
   ///style: BorderStyle.solid
   ///),
   ///```
-  final BorderSide? borderside;
+  final BorderSide? borderSide;
 
   ///Add shadow
   final double? elevation;
@@ -113,19 +113,7 @@ class BannerListTile extends StatelessWidget {
 
   ///Set banner size.
   ///Height & Width will be 1:1 aspect ratio.
-  final double? bannersize;
-
-  ///If true then it will choose a random color\
-  ///among these two:
-  ///```dart
-  ///Color(0xff003354)
-  ///Colors.blue
-  ///```
-  final bool? randomBackgroundColor; //Change background color randomly
-
-  ///Background color list
-  final List<Color> color = const [Color(0xff003354), Colors.blue];
-  static int num = 0;
+  final double? bannerSize;
 
   ///Fuctions
   final Function()? onTap;
@@ -145,7 +133,7 @@ class BannerListTile extends StatelessWidget {
   const BannerListTile({
     Key? key,
     this.bannerText,
-    this.bannersize = 40.0,
+    this.bannerSize = 40.0,
     this.showBanner = true,
     this.bannerPosition = BannerPosition.topRight,
     this.bannerTextColor,
@@ -167,9 +155,7 @@ class BannerListTile extends StatelessWidget {
     this.width,
     this.margin,
     this.elevation,
-    @Deprecated('This option should not be use and will be removed upon next update.')
-    this.randomBackgroundColor,
-    this.borderside,
+    this.borderSide,
     this.onTap,
     this.onTapCancel,
     this.onHighlightChanged,
@@ -182,14 +168,14 @@ class BannerListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    num = math.Random().nextInt(2);
     double screenwidth = MediaQuery.of(context).size.width;
     return Card(
       margin: margin ?? const EdgeInsets.all(0),
       elevation: elevation ?? 0,
       shape: RoundedRectangleBorder(
           borderRadius: borderRadius ?? BorderRadius.circular(0),
-          side: borderside ?? BorderSide.none),
+          side: borderSide ?? BorderSide.none,
+      ),
       child: ClipRRect(
         clipBehavior: Clip.antiAlias,
         borderRadius: borderRadius ?? BorderRadius.circular(0),
@@ -197,7 +183,7 @@ class BannerListTile extends StatelessWidget {
           height: height,
           width: width ?? screenwidth,
           child: Material(
-            color: randomBackgroundColor == true ? color[num] : backgroundColor,
+            color:  backgroundColor,
             child: InkWell(
               onTapCancel: onTapCancel,
               onHighlightChanged: onHighlightChanged,
@@ -315,20 +301,20 @@ class BannerListTile extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: bannerColor ?? const Color(0xffcf0517),
                           ),
-                          height: bannersize == null
+                          height: bannerSize == null
                               ? 40
-                              : bannersize! >= 80
+                              : bannerSize! >= 80
                                   ? 80
-                                  : bannersize! <= 40
+                                  : bannerSize! <= 40
                                       ? 40.0
-                                      : bannersize!, //40
-                          width: bannersize == null
+                                      : bannerSize!, //40
+                          width: bannerSize == null
                               ? 40
-                              : bannersize! >= 80
+                              : bannerSize! >= 80
                                   ? 80
-                                  : bannersize! <= 40
+                                  : bannerSize! <= 40
                                       ? 40.0
-                                      : bannersize!,
+                                      : bannerSize!,
                           child: Align(
                               alignment: bannerPosition == BannerPosition.topLeft
                                   ? Alignment.topLeft
@@ -341,21 +327,21 @@ class BannerListTile extends StatelessWidget {
                                     ? -math.pi / 4
                                     : math.pi / 4,
                                 child: SizedBox(
-                                  height: bannersize == null
+                                  height: bannerSize == null
                                       ? 30
-                                      : bannersize! >= 80
+                                      : bannerSize! >= 80
                                           ? (30.0 * 80.0) / 40.0
-                                          : bannersize! <= 40
+                                          : bannerSize! <= 40
                                               ? (30.0 * 40.0) / 40.0
-                                              : (30.0 * bannersize!) /
+                                              : (30.0 * bannerSize!) /
                                                   40.0, //30
-                                  width: bannersize == null
+                                  width: bannerSize == null
                                       ? 30
-                                      : bannersize! >= 80
+                                      : bannerSize! >= 80
                                           ? (30.0 * 80.0) / 40.0
-                                          : bannersize! <= 40
+                                          : bannerSize! <= 40
                                               ? (30.0 * 40.0) / 40.0
-                                              : (30.0 * bannersize!) / 40.0,
+                                              : (30.0 * bannerSize!) / 40.0,
                                   child: FittedBox(
                                       alignment: Alignment.center,
                                       fit: BoxFit.contain,
@@ -370,20 +356,22 @@ class BannerListTile extends StatelessWidget {
                                             style: TextStyle(
                                                 color: bannerTextColor ??
                                                     Colors.yellow),
-                                          ),),),
+                                          ),
+                                      ),
+                                  ),
                                 ),
                               ):
 
                               //Banner Icon
                               SizedBox(
 
-                                height: bannersize == null || bannersize! <= 40
-                                    ? 20:bannersize! >=80? 40: (bannersize!/2), //30
-                                width: bannersize == null || bannersize! <= 40
-                                    ? 20:bannersize! >=80? 40: (bannersize!/2),
+                                height: bannerSize == null || bannerSize! <= 40
+                                    ? 20:bannerSize! >=80? 40: (bannerSize!/2), //30
+                                width: bannerSize == null || bannerSize! <= 40
+                                    ? 20:bannerSize! >=80? 40: (bannerSize!/2),
                                 child: Container(
-                                  alignment: Alignment.bottomLeft,
-                                  transformAlignment: Alignment.bottomLeft,
+                                  alignment: bannerPosition == null || bannerPosition == BannerPosition.topRight? Alignment.bottomLeft:Alignment.bottomRight,
+                                  transformAlignment: bannerPosition == null || bannerPosition == BannerPosition.topRight? Alignment.bottomLeft:Alignment.bottomRight,
 
 
                                   child: Transform.rotate(
@@ -391,10 +379,10 @@ class BannerListTile extends StatelessWidget {
                                         ? -math.pi / bannerIconRotation!
                                         : math.pi / bannerIconRotation!,
                                     child: SizedBox(
-                                      height: bannersize == null || bannersize! <= 40
-                                          ? 20-(20 - (math.sqrt((20*20)+(20*20))/2)):bannersize! >=80? 40-(40 - (math.sqrt((40*40)+(40*40))/2)): (bannersize!/2)-((bannersize!/2) - (math.sqrt(((bannersize!/2)*(bannersize!/2))+((bannersize!/2)*(bannersize!/2)))/2)), //30
-                                      width: bannersize == null || bannersize! <= 40
-                                          ? 20-(20 - (math.sqrt((20*20)+(20*20))/2)):bannersize! >=80? 40-(40 - (math.sqrt((40*40)+(40*40))/2)): (bannersize!/2)-((bannersize!/2) - (math.sqrt(((bannersize!/2)*(bannersize!/2))+((bannersize!/2)*(bannersize!/2)))/2)),
+                                      height: bannerSize == null || bannerSize! <= 40
+                                          ? 20-(20 - (math.sqrt((20*20)+(20*20))/2)):bannerSize! >=80? 40-(40 - (math.sqrt((40*40)+(40*40))/2)): (bannerSize!/2)-((bannerSize!/2) - (math.sqrt(((bannerSize!/2)*(bannerSize!/2))+((bannerSize!/2)*(bannerSize!/2)))/2)), //30
+                                      width: bannerSize == null || bannerSize! <= 40
+                                          ? 20-(20 - (math.sqrt((20*20)+(20*20))/2)):bannerSize! >=80? 40-(40 - (math.sqrt((40*40)+(40*40))/2)): (bannerSize!/2)-((bannerSize!/2) - (math.sqrt(((bannerSize!/2)*(bannerSize!/2))+((bannerSize!/2)*(bannerSize!/2)))/2)),
                                       child: FittedBox(
                                         alignment: Alignment.center,
                                         fit: BoxFit.contain,

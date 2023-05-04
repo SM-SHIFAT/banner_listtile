@@ -13,7 +13,7 @@ class ListviewScreen extends StatelessWidget {
 
           onTap: (){},
           bannerText: "banner",
-          randomBackgroundColor: true,
+
 
           imageContainerShapeZigzagIndex: index,
           bannerPosition: BannerPosition.topLeft,
