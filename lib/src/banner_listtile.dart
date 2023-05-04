@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'const.dart';
+
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //                                                                      //
@@ -15,7 +17,7 @@ import 'dart:math' as math;
 
 class BannerListTile extends StatelessWidget {
   ///Banner position will be set [Left or Right] by value [false or true]
-  final bool? bannerPositionRight;
+  final BannerPosition? bannerPosition;
 
   ///Show Banner on top corner or not.
   final bool? showBanner;
@@ -115,7 +117,7 @@ class BannerListTile extends StatelessWidget {
 
   ///Background color list
   final List<Color> color = const [Color(0xff003354), Colors.blue];
-  static int num = math.Random().nextInt(2);
+  static int num = 0;
 
   ///Fuctions
   final Function()? onTap;
@@ -137,7 +139,7 @@ class BannerListTile extends StatelessWidget {
     this.bannerText,
     this.bannersize = 40.0,
     this.showBanner = true,
-    this.bannerPositionRight = true,
+    this.bannerPosition = BannerPosition.topRight,
     this.bannerTextColor,
     this.bannerColor,
     this.title,
@@ -155,6 +157,7 @@ class BannerListTile extends StatelessWidget {
     this.width,
     this.margin,
     this.elevation,
+    @Deprecated('This option should not be use and will be removed upon next update.')
     this.randomBackgroundColor,
     this.borderside,
     this.onTap,
@@ -169,6 +172,7 @@ class BannerListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    num = math.Random().nextInt(2);
     double screenwidth = MediaQuery.of(context).size.width;
     return Card(
       margin: margin ?? const EdgeInsets.all(0),
@@ -290,13 +294,13 @@ class BannerListTile extends StatelessWidget {
                   if (showBanner == true)
                     Positioned(
                       top: 0,
-                      left: bannerPositionRight == false ? 0 : null,
-                      right: bannerPositionRight == true ||
-                              bannerPositionRight == null
+                      left: bannerPosition == BannerPosition.topLeft ? 0 : null,
+                      right: bannerPosition == BannerPosition.topRight ||
+                              bannerPosition == null
                           ? 0
                           : null,
                       child: ClipPath(
-                        clipper: BannerClipper(bannerPositionRight),
+                        clipper: BannerClipper(bannerPosition),
                         child: Container(
                           decoration: BoxDecoration(
                             color: bannerColor ?? const Color(0xffcf0517),
@@ -316,11 +320,11 @@ class BannerListTile extends StatelessWidget {
                                       ? 40.0
                                       : bannersize!,
                           child: Align(
-                              alignment: bannerPositionRight == false
+                              alignment: bannerPosition == BannerPosition.topLeft
                                   ? Alignment.topLeft
                                   : Alignment.topRight,
                               child: Transform.rotate(
-                                angle: bannerPositionRight == false
+                                angle: bannerPosition == BannerPosition.topLeft
                                     ? -math.pi / 4
                                     : math.pi / 4,
                                 child: SizedBox(
@@ -403,7 +407,7 @@ class ImageBoxClipper extends CustomClipper<Path> {
 
 //Custom banner container shape
 class BannerClipper extends CustomClipper<Path> {
-  final bool? side;
+  final BannerPosition? side;
 
   BannerClipper(this.side);
 
@@ -411,7 +415,7 @@ class BannerClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     var path = Path();
 
-    if (side == null || side == true) {
+    if (side == null || side == BannerPosition.topRight) {
       path.lineTo(size.width, 0);
       path.lineTo(size.width, size.height);
     } else {
