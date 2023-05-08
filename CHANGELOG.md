@@ -1,3 +1,9 @@
+## 2.3.0
+- ✅ Position enum added. Instead of boolean, now it takes a Position enum.
+- 🔀 Now Icons can be added on banner in place of text.
+- 🚫 RandomColor property removed from this package.
+- ✨ Fixed UI bleeding issue as now zigzagimage side looks smoother and sharp.
+
 ## 2.2.2
 - Documentation updated.
 
