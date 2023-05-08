@@ -69,10 +69,10 @@ class CustomScreen extends StatelessWidget {
             bannerColor: Colors.amber,
             bannerTextColor: Colors.red,
             bannerText: "Hot",
-            bannerIcon: Icon(Icons.dashboard_customize),
+            bannerIcon: const Icon(Icons.new_releases_outlined),
             //bannerIcon: Container(color: Colors.green,height: 200,width: 200),
             bannerIconRotation: 1,
-            bannerSize: 50,
+            bannerSize: 45,
 
             borderRadius: BorderRadius.circular(8),
             imageContainer: const Image(

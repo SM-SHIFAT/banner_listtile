@@ -203,9 +203,10 @@ class BannerListTile extends StatelessWidget {
                           ? Align(
                               alignment: Alignment.topLeft,
                               child: ClipPath(
+                                clipBehavior: Clip.antiAlias,
                                 clipper: ImageBoxClipper(
                                     imageContainerShapeZigzagIndex),
-                                child: Container(
+                                child: SizedBox(
                                   height: imageContainerSize == null
                                       ? 80
                                       : imageContainerSize! > 190
@@ -220,7 +221,7 @@ class BannerListTile extends StatelessWidget {
                                           : imageContainerSize! < 80
                                               ? 80
                                               : imageContainerSize,
-                                  color: Colors.white,
+
                                   child: imageContainer,
                                 ),
                               ),

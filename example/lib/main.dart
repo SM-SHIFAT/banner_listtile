@@ -1,4 +1,4 @@
-import 'package:banner_listtile/banner_listtile.dart';
+
 import 'package:flutter/material.dart';
 
 import 'custom_screen.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       //debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home:  ContainerTestView(),
+      home:  const ContainerTestView(),
     );
   }
 }
@@ -35,8 +35,8 @@ class _ContainerTestViewState extends State<ContainerTestView> {
   int _selectedIndex = 0;
 
   static final List<Widget> _pages = <Widget>[
-    ListviewScreen(),
-    CustomScreen(),
+    const ListviewScreen(),
+    const CustomScreen(),
 
   ];
 
@@ -48,7 +48,7 @@ class _ContainerTestViewState extends State<ContainerTestView> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
